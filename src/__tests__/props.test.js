@@ -1,7 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from '../App'
-import Message from '../Components/Message.jsx'
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import App from '../App.jsx';
+import Message from '../Components/Message.jsx';
+
+Enzyme.configure({ adapter: new Adapter() });
+global.shallow = shallow;
+global.mount = mount;
+
 
 // describe('Testing Counter', () => {
 //   it('is alive at application start', function() {
@@ -25,9 +32,6 @@ describe('Testing App ', () => {
     it('should should render correctly', () => {
       const tree = renderer.create(<Message />).toJSON();
       expect(tree).toMatchSnapshot();
-
     });
   });
-
 });
-

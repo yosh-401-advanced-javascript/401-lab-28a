@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 class Message extends React.Component {
@@ -8,9 +8,8 @@ class Message extends React.Component {
     this.state = {
       text: 'Hello World',
       name: this.props.name,
-      number: this.props.number
+      number: this.props.number,
     };
-
   }
 
   render() {
@@ -25,5 +24,4 @@ class Message extends React.Component {
 }
 
 
-
-export default Message
+export default Message;

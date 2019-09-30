@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Message from './Components/Message'
+import Message from './Components/Message';
 
 
 class App extends React.Component {
@@ -9,9 +9,8 @@ class App extends React.Component {
 
     this.state = {
       name: 'Han Solo',
-      number: '4'
+      number: '4',
     };
-
   }
 
 
@@ -23,8 +22,8 @@ class App extends React.Component {
               number={this.state.number}
           />
         </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
